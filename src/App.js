@@ -304,10 +304,6 @@ const App = () => {
                       } ${!validateAnswer(option.value) ? 'opacity-50 cursor-not-allowed' : ''}`}
                   >
                     <div className="flex justify-between items-center">
-                      <ChevronRight className={`${answers[currentQuestionId] === option.value
-                        ? 'text-green-500'
-                        : 'text-gray-400 group-hover:text-indigo-500'
-                        }`} size={20} />
                       <div>
                         <span className="text-gray-800 font-medium">{option.label}</span>
                         {option.description && <p className="text-sm text-gray-500">{option.description}</p>}
@@ -317,6 +313,10 @@ const App = () => {
                           </span>
                         )}
                       </div>
+                      <ChevronLeft className={`${answers[currentQuestionId] === option.value
+                        ? 'text-green-500'
+                        : 'text-gray-400 group-hover:text-indigo-500'
+                        }`} size={20} />
                     </div>
                   </button>
                 ))}
@@ -359,7 +359,7 @@ const App = () => {
                   : 'text-gray-300 cursor-not-allowed'
                   }`}
               >
-                <ChevronLeft size={20} className="ml-2" />
+                <ChevronRight size={20} className="ml-2" />
                 שאלה קודמת
               </button>
 
@@ -370,7 +370,7 @@ const App = () => {
                   className="flex items-center px-4 py-2 rounded-lg text-indigo-600 hover:bg-indigo-50 transition-colors duration-200 disabled:opacity-50"
                 >
                   שאלה הבאה
-                  <ChevronRight size={20} className="mr-2" />
+                  <ChevronLeft size={20} className="mr-2" />
                 </button>
               )}
             </div>
