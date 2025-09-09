@@ -393,13 +393,13 @@ const App = () => {
                   const ans = answers[qId];
                   return (
                     <div key={qId} className="flex justify-between">
+                      <span className="font-medium">{q.question}</span>
                       <span className="text-gray-600">
                         {q.type === 'multiple'
                           ? q.options?.find(opt => opt.value === ans)?.label
                           : ans
                         }
                       </span>
-                      <span className="font-medium">{q.question}</span>
                     </div>
                   );
                 })}
