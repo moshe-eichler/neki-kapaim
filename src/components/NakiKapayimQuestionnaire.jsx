@@ -421,7 +421,7 @@ const NakiKapayimQuestionnaire = () => {
                                   className="w-6 h-6 mr-2 flex-shrink-0"
                               />
                           )}
-                          {option.text}
+                          {/*{option.text}*/}
                         </button>
                     ))
                 )}
