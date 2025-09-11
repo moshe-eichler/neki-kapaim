@@ -418,7 +418,6 @@ const NakiKapayimQuestionnaire = () => {
                               <img
                                   src={option.icon}
                                   alt={`${option.text} Icon`}
-                                  className="w-6 h-6 mr-2 flex-shrink-0"
                               />
                           )}
                           {/*{option.text}*/}
